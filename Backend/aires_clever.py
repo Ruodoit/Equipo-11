@@ -22,126 +22,177 @@ def aires():
       
     return resultado
 
-@app.route('/dispositivos/aireacondicionado/cambiarestado',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/cambiarestado',methods=['GET','POST'])
 def estado():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"estado":resultados[i ][1]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET estado=('estado') WHERE id=('id');")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    id=request.args.get('id')
+    estado=request.args.get('estado')   
+    
+    print(estado)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/verificarconexion',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/verificarconexion',methods=['GET','POST'])
 def conexion():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"conexion":resultados[i ][2]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET conexion=conexion WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    id=request.args.get('id')
+    conexion=request.args.get('conexion')   
+    
+    print(conexion)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/editarnombre',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/editarnombre',methods=['GET','POST'])
 def nombre():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"nombre":resultados[i ][3]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET nombre=nombre WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    id=request.args.get('id')
+    conexion=request.args.get('nombre')   
+    
+    print(nombre)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/cambiartemperatura',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/cambiartemperatura',methods=['GET','POST'])
 def temperatura():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"temperatura":resultados[i ][4]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET temperatura=temperatura WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    temperatura=request.args.get('temperatura')
+    ida=request.args.get('id')
+    
+    print(temperatura)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/activarfan',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/activarfan',methods=['GET','POST'])
 def fan():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"fan":resultados[i ][5]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET fan=fan WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    temperatura=request.args.get('fan')
+    ida=request.args.get('id')
+    
+    print(fan)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/activarswin',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/activarswin',methods=['GET','POST'])
 def swin():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"swin":resultados[i ][6]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET swin=swin WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    swin=request.args.get('swin')
+    ida=request.args.get('id')
+    
+    print(swin)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/activartimer',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/activartimer',methods=['GET','POST'])
 def timer():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"timer":resultados[i ][7]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET timer=timer WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    timer=request.args.get('timer')
+    ida=request.args.get('id')
+    
+    print(timer)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/activarsleep',methods=['GET','PUT'])
+@app.route('/dispositivos/aireacondicionado/activarsleep',methods=['GET','POST'])
 def sleep():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"sleep":resultados[i ][8]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET sleep=sleep WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    sleep=request.args.get('sleep')
+    ida=request.args.get('id')
+    
+    print(sleep)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/cambiarmodo',methods=['GET','PUT'])
+
+@app.route('/dispositivos/aireacondicionado/cambiarmodo',methods=['GET','POST'])
 def modo():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"modo":resultados[i ][8]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET modo=modo WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    modo=request.args.get('modo')
+    ida=request.args.get('id')
+    
+    print(modo)
+    return { "status": 200, "state": "OK" }
 
-@app.route('/dispositivos/aireacondicionado/cambiardireccion',methods=['GET','PUT'])
+
+@app.route('/dispositivos/aireacondicionado/cambiardireccion',methods=['GET','POST'])
 def direccion():
-    resultado={"aires":[]}
-    i=0
-    while i <len(resultados):
-        aire={"id":resultados[i][0],"direccion":resultados[i ][8]}
-        i+=1
-        resultado["aires"].append(aire)
-        print(aire)
-      
-    return resultado
-
+    mydb=mysql.connector.connect(host="b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com",database="b0zrkz2xyg7u8afh6has",
+user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
+# connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
+    cursor=mydb.cursor()
+    sql=("UPDATE aireacondicionado SET direccion=direccion WHERE id=id;")
+    cursor.execute(sql)
+    resultado=cursor.fetchall() 
+    mydb.commit()   
+    
+    direccion=request.args.get('direccion')
+    ida=request.args.get('id')
+    
+    print(direccion)
+    return { "status": 200, "state": "OK" }
 
 cursor.close()
 mydb.close()
