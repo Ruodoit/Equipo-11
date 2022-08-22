@@ -11,7 +11,12 @@ export default function ListaItem(props) {
         <div>
           <div className='itemPrincipal'>
           <div className='contenedorImg'>
+          {dispositivo[11] ? (
             <img src={imgAireGris} alt='' className='imgItem' />
+            ) : (
+              <img src={imgVentilador} alt='' className='imgItem' />
+              )}
+
           </div>
 
             <div className='principalTxt'>
@@ -41,7 +46,14 @@ export default function ListaItem(props) {
     return (
       <div className='itemActivo'>
         <div className='itemPrincipal'>
-          <span class='material-icons itemImg'>image_search</span>
+        <div className='contenedorImg'>
+          {dispositivo[11] ? (
+            <img src={imgAireGris} alt='' className='imgItem' />
+            ) : (
+              <img src={imgVentilador} alt='' className='imgItem' />
+              )}
+
+          </div>
           <div className='principalTxt'>
             <h2>{dispositivo[3]}</h2>
             {dispositivo[11] ? (
@@ -65,7 +77,14 @@ export default function ListaItem(props) {
       <>
         <div className='itemInactivo'>
           <div className='itemPrincipal'>
-            <span class='material-icons itemImg'>image_search</span>
+          <div className='contenedorImg'>
+          {dispositivo[11] ? (
+            <img src={imgAireGris} alt='' className='imgItem' />
+            ) : (
+              <img src={imgVentilador} alt='' className='imgItem' />
+              )}
+
+          </div>
             <div className='principalTxt'>
               <h2>{dispositivo[3]}</h2>
               {dispositivo[11] ? (
