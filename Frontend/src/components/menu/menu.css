@@ -1,0 +1,14 @@
+.menu {
+  width: 390px;
+  height: 12vh;
+  display: flex;
+  justify-content: space-around;
+}
+.btnMenu {
+  border: none;
+  background: none;
+  color: var(--texto);
+}
+.btnMenu:hover {
+  color: var(--acento);
+}

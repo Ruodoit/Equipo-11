@@ -1,0 +1,77 @@
+:root {
+  --principal: #68a098;
+  --secundario: #f2fffd;
+  --acento: #ca732a;
+  --texto: #264653;
+  --blanco: #ffffff;
+  --desconectado: #727272;
+}
+/* 
+TITULO POPPINS SEMIBOLD 24PX
+SUBTITULO POPPINS REGULAR 16PX
+BOTONES POPPINS REGULAR 14PX
+INFORMACIÓN POPPINS REGULAR 12PX 
+font-family: 'Poppins', sans-serif;
+
+ICONOS
+FRIO: <span class="material-icons">ac_unit</span>
+CALOR: <span class="material-icons">wb_sunny</span>
+ATENCION: <span class="material-icons">report_problem</span>
+NOTIFICACIONES: <span class="material-icons">notifications_paused</span>
+MAXIMO: <span class="material-icons">speed</span>
+FAVORITOS: <span class="material-icons">bookmark_add</span>
+PUNTOS: <span class="material-icons">more_vert</span>
+ON-OFF: <span class="material-icons">power_settings_new</span>
+AGREGAR: <span class="material-icons">add_circle_outline</span>
+menu: <span class="material-icons">horizontal_split</span>
+CONFIGURACION: 
+*/
+body {
+  width: 420px;
+  height: 95vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.btnTxt {
+  font-size: 14px;
+}
+
+.infoTxt {
+  font-size: 12px;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

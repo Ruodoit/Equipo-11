@@ -1,0 +1,59 @@
+.itemActivo {
+  width: 358px;
+  height: 207px;
+  box-sizing: border-box;
+  background: var(--blanco);
+  border: 1px solid var(--principal);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 1px 1px 4px var(--principal);
+  border-radius: 10px;
+  margin: 13px 13px 0px 13px;
+  color: var(--principal);
+}
+.itemInactivo {
+  width: 358px;
+  height: 140px;
+  box-sizing: border-box;
+  background: var(--blanco);
+  border: 1px solid var(--acento);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 1px 1px 4px var(--acento);
+  border-radius: 10px;
+  margin: 13px 13px 0px 13px;
+  color: var(--acento);
+}
+.itemDesconectado {
+  width: 358px;
+  height: 140px;
+  box-sizing: border-box;
+  background: var(--blanco);
+  border: 1px solid var(--desconectado);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 1px 1px 4px var(--desconectado);
+  border-radius: 10px;
+  margin: 13px 13px 0px 13px;
+  color: var(--desconectado);
+}
+
+.itemPrincipal {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.itemImg {
+  font-size: 88px;
+  color: var(--desconectado);
+}
+.puntitos {
+  font-size: 28px;
+}
+.itemDetalles {
+  text-align: end;
+  padding: 3px 13px 13px 13px;
+}
+.itemActivoDetalles {
+  width: 353px;
+  height: 67px;
+  background: linear-gradient(90deg, #68a098 0%, rgba(104, 160, 152, 0) 93.34%);
+  border-radius: 0px 0px 6px 6px;
+  margin-top: 26px;
+}
