@@ -11,4 +11,11 @@
 }
 .btnMenu:hover {
   color: var(--acento);
+  fill: var(--acento);
+}
+.menuSvg {
+  fill: var(--texto);
+}
+.menuSvg:hover {
+  fill: var(--acento);
 }

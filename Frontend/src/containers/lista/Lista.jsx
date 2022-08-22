@@ -1,5 +1,6 @@
 import './lista.css'
 import { useState, useEffect } from 'react'
+import BtnAgregar from '../../components/btnAgregar/BtnAgregar'
 import ListaItem from '../../components/listaItem/ListaItem'
 
 export default function Lista() {
@@ -27,6 +28,7 @@ export default function Lista() {
 
   return (
     <div className='lista'>
+            <BtnAgregar></BtnAgregar>
       {aire.map((aire) => (
         <ListaItem dispositivo={aire} key={aire[0]}/>
       ))}

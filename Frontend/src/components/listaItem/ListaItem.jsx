@@ -1,4 +1,6 @@
 import './listaItem.css'
+import imgVentilador from '../../assets/statics/vent-rojo.png'
+import imgAireGris from '../../assets/statics/aire-gris.png'
 
 export default function ListaItem(props) {
   const { dispositivo } = props
@@ -6,18 +8,24 @@ export default function ListaItem(props) {
   if (dispositivo[2] == null) {
     return (
       <div className='itemDesconectado'>
-        <div className='itemPrincipal'>
-          <span class='material-icons itemImg'>image_search</span>
-          <div className='principalTxt'>
-            <h2>{dispositivo[3]}</h2>
-            {dispositivo[11] ? (
-              <p className='infoTxt'>Aire Acondicionado</p>
-            ) : (
-              <p className='infoTxt'>Ventilador</p>
-            )}
+        <div>
+          <div className='itemPrincipal'>
+          <div className='contenedorImg'>
+            <img src={imgAireGris} alt='' className='imgItem' />
           </div>
-          <span class='material-icons'>more_vert</span>
+
+            <div className='principalTxt'>
+              <h2>{dispositivo[3]}</h2>
+              {dispositivo[11] ? (
+                <p className='infoTxt'>Aire Acondicionado</p>
+              ) : (
+                <p className='infoTxt'>Ventilador</p>
+              )}
+            </div>
+            <span class='material-icons'>more_vert</span>
+          </div>
         </div>
+
         <div className='itemDetalles'>
           <div className='desconectado'>
             <span class='material-icons iconoDesconectado'>report_problem</span>

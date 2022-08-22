@@ -45,11 +45,14 @@ h2 {
 }
 
 .btnTxt {
-  font-size: 14px;
+  font-size: 12px;
+  margin: 0px;
 }
 
 .infoTxt {
   font-size: 12px;
+  line-height: 18px;
+  margin: 0px;
 }
 .material-icons {
   font-family: 'Material Icons';
