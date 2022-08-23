@@ -4,20 +4,22 @@ import imgAireGris from '../../assets/statics/aire-gris.png'
 
 export default function ListaItem(props) {
   const { dispositivo } = props
-  console.log(dispositivo[3])
+  const handleEditar = () => {
+    alert('Aca se abrira el modal con las configuraciones')
+  }
+
   if (dispositivo[2] == null) {
     return (
       <div className='itemDesconectado'>
         <div>
           <div className='itemPrincipal'>
-          <div className='contenedorImg'>
-          {dispositivo[11] ? (
-            <img src={imgAireGris} alt='' className='imgItem' />
-            ) : (
-              <img src={imgVentilador} alt='' className='imgItem' />
+            <div className='contenedorImg'>
+              {dispositivo[11] ? (
+                <img src={imgAireGris} alt='' className='imgItem' />
+              ) : (
+                <img src={imgVentilador} alt='' className='imgItem' />
               )}
-
-          </div>
+            </div>
 
             <div className='principalTxt'>
               <h2>{dispositivo[3]}</h2>
@@ -27,13 +29,17 @@ export default function ListaItem(props) {
                 <p className='infoTxt'>Ventilador</p>
               )}
             </div>
-            <span class='material-icons'>more_vert</span>
+            <span className='material-icons puntitos' onClick={handleEditar}>
+              more_vert
+            </span>
           </div>
         </div>
 
         <div className='itemDetalles'>
           <div className='desconectado'>
-            <span class='material-icons iconoDesconectado'>report_problem</span>
+            <span className='material-icons iconoDesconectado'>
+              report_problem
+            </span>
             <div className='desconectadoTxt'>
               <p className='infoTxt'>DISPOSITIVO NO ENCONTRADO.</p>
               <p className='infoTxt'>REVISE LA CONEXION</p>
@@ -46,13 +52,12 @@ export default function ListaItem(props) {
     return (
       <div className='itemActivo'>
         <div className='itemPrincipal'>
-        <div className='contenedorImg'>
-          {dispositivo[11] ? (
-            <img src={imgAireGris} alt='' className='imgItem' />
+          <div className='contenedorImg'>
+            {dispositivo[11] ? (
+              <img src={imgAireGris} alt='' className='imgItem' />
             ) : (
               <img src={imgVentilador} alt='' className='imgItem' />
-              )}
-
+            )}
           </div>
           <div className='principalTxt'>
             <h2>{dispositivo[3]}</h2>
@@ -62,11 +67,20 @@ export default function ListaItem(props) {
               <p className='infoTxt'>Ventilador</p>
             )}
           </div>
-          <span class='material-icons puntitos'>more_vert</span>
+          <span className='material-icons puntitos' onClick={handleEditar}>
+            more_vert
+          </span>
         </div>
         <div className='itemActivoDetalles'>
+          {dispositivo[11] ? (
+            <button>frio/calor</button>
+          ) : (
+            <button>velocidad</button>
+          )}
+
+          <button>sleep</button>
           <div className='encendido'>
-            <span class='material-icons'>power_settings_new</span>
+            <span className='material-icons'>power_settings_new</span>
             <p className='infoTxt'>ON</p>
           </div>
         </div>
@@ -77,14 +91,13 @@ export default function ListaItem(props) {
       <>
         <div className='itemInactivo'>
           <div className='itemPrincipal'>
-          <div className='contenedorImg'>
-          {dispositivo[11] ? (
-            <img src={imgAireGris} alt='' className='imgItem' />
-            ) : (
-              <img src={imgVentilador} alt='' className='imgItem' />
+            <div className='contenedorImg'>
+              {dispositivo[11] ? (
+                <img src={imgAireGris} alt='' className='imgItem' />
+              ) : (
+                <img src={imgVentilador} alt='' className='imgItem' />
               )}
-
-          </div>
+            </div>
             <div className='principalTxt'>
               <h2>{dispositivo[3]}</h2>
               {dispositivo[11] ? (
@@ -93,11 +106,13 @@ export default function ListaItem(props) {
                 <p className='infoTxt'>Ventilador</p>
               )}
             </div>
-            <span class='material-icons'>more_vert</span>
+            <span className='material-icons puntitos' onClick={handleEditar}>
+              more_vert
+            </span>
           </div>
           <div className='itemDetalles'>
             <div className='encendido'>
-              <span class='material-icons'>power_settings_new</span>
+              <span className='material-icons'>power_settings_new</span>
               <p className='infoTxt'>ON</p>
             </div>
           </div>

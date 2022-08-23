@@ -9,7 +9,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
-            <Route path='/dispositivo' element={<Dispositivo/>}></Route>
+            <Route path='/dispositivo/:id' element={<Dispositivo/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>

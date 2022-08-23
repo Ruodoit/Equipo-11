@@ -24,18 +24,15 @@ export default function Lista() {
     getVentilador()
   }, [])
 
-
-
   return (
     <div className='lista'>
-            <BtnAgregar></BtnAgregar>
-      {aire.map((aire) => (
-        <ListaItem dispositivo={aire} key={aire[0]}/>
+      <BtnAgregar></BtnAgregar>
+      {aire.map((aire, index) => (
+          <ListaItem dispositivo={aire} key={index} />
       ))}
-            {ventilador.map((ventilador) => (
-        <ListaItem dispositivo={ventilador} key={ventilador[0]}/>
+      {ventilador.map((ventilador) => (
+        <ListaItem dispositivo={ventilador} key={ventilador[0]} />
       ))}
-
     </div>
   )
 }
