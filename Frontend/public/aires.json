@@ -1,0 +1,44 @@
+{
+  "01": {
+    "id": 1,
+    "estado": "off",
+    "conexion": "conect",
+    "nombre": "aire 1",
+    "temperatura": 25,
+    "swin": "act",
+    "fan": "desact",
+    "frioCalor": "calor",
+    "dato1": 2,
+    "dato2": "act",
+    "dato3": 0,
+    "dato4": "0"
+  },
+  "02": {
+    "id": 2,
+    "estado": "off",
+    "conexion": "conect",
+    "nombre": "aire 1",
+    "temperatura": 25,
+    "swin": "act",
+    "fan": "desact",
+    "frioCalor": "calor",
+    "dato1": 2,
+    "dato2": "act",
+    "dato3": 0,
+    "dato4": "0"
+  },
+  "03": {
+    "id": 3,
+    "estado": "null",
+    "conexion": "desconect",
+    "nombre": "null",
+    "temperatura": "null",
+    "swin": "null",
+    "fan": "act",
+    "frioCalor": "frio",
+    "dato1": "null",
+    "dato2": "null",
+    "dato3": "null",
+    "dato4": "null"
+  }
+}

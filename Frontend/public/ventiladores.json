@@ -1,0 +1,6 @@
+{
+  "VENTILADORES": [
+    [1, "on", "conect", "vent 1", 3, 0, "desact"],
+    [2, "on", null, "vent 2", 3, null, "desact"]
+  ]
+}

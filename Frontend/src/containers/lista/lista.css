@@ -1,0 +1,14 @@
+.lista {
+  width: 100%;
+  max-width: 420px;
+  height: 75vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
