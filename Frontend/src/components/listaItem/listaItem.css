@@ -54,6 +54,7 @@
 }
 .puntitos {
   font-size: 28px;
+  cursor: pointer;
 }
 .itemDetalles {
   padding: 3px 13px 13px 13px;
