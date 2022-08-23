@@ -28,7 +28,7 @@ def estado():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET estado=('estado') WHERE id=('id');")
+    sql=("UPDATE aireacondicionado SET estado='"+estado+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -45,7 +45,7 @@ def conexion():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET conexion=conexion WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET conexion='"+conexion+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -62,7 +62,7 @@ def nombre():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET nombre=nombre WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET nombre='"+nombre+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -79,7 +79,7 @@ def temperatura():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET temperatura=temperatura WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET temperatura='"+temperatura+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -96,7 +96,7 @@ def fan():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET fan=fan WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET fan='"+fan+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -113,7 +113,7 @@ def swin():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET swin=swin WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET swin='"+swin+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -130,7 +130,7 @@ def timer():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET timer=timer WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET timer='"+timer+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -147,7 +147,7 @@ def sleep():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET sleep=sleep WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET sleep='"+sleep+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
@@ -165,13 +165,13 @@ def modo():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET modo=modo WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET modo='"+modo+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
     
     modo=request.args.get('modo')
-    ida=request.args.get('id')
+    id=request.args.get('id')
     
     print(modo)
     return { "status": 200, "state": "OK" }
@@ -183,7 +183,7 @@ def direccion():
 user="ui6majbcugnjjink",password="sNHVs7AyLnUbsimZIKWG", port='3306')
 # connectionURI='mysql://ui6majbcugnjjink:sNHVs7AyLnUbsimZIKWG@b0zrkz2xyg7u8afh6has-mysql.services.clever-cloud.com:3306/b0zrkz2xyg7u8afh6has'
     cursor=mydb.cursor()
-    sql=("UPDATE aireacondicionado SET direccion=direccion WHERE id=id;")
+    sql=("UPDATE aireacondicionado SET direccion='"+direccion+"' WHERE id='"+id+"';")
     cursor.execute(sql)
     resultado=cursor.fetchall() 
     mydb.commit()   
