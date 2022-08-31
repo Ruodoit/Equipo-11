@@ -1,41 +1,53 @@
 .link {
   text-decoration: none;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .itemActivo {
-  width: 98vw;
+  width: 85%;
   max-width: 395px;
-  *height: 207px;
+  height: 150px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--principal);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px #fdfafa;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
+    -10px -10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin: 13px 13px 0px 13px;
   color: var(--principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .itemInactivo {
-  width: 98vw;
+  width: 85%;
   max-width: 395px;
-  *height: 140px;
+  height: 130px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--acento);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
-    -10px -10px 20px rgba(253, 250, 250, 0.1);
+    -10px -10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin: 13px 13px 0px 13px;
   color: var(--acento);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .itemDesconectado {
-  width: 98vw;
+  width: 85%;
   max-width: 395px;
-  *height: 140px;
+  height: 130px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--desconectado);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
-    -10px -10px 20px rgba(253, 250, 250, 0.1);
+    -10px -10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin: 13px 13px 0px 13px;
   color: var(--desconectado);
@@ -45,18 +57,25 @@
 }
 
 .itemPrincipal {
-  *padding: 12px;
+  padding: 15px 10px 0 10px;
   display: flex;
   justify-content: space-between;
 }
 .itemImg {
   font-size: 88px;
   color: var(--desconectado);
+  justify-self: center;
+  align-self: center;
 }
 .principalTxt {
   width: 250px;
+  height: 70px;
+}
+.principalTxt h2 {
+  margin: 0 0 10px 0;
 }
 .puntitos {
+  align-self: flex-start;
   font-size: 28px;
   cursor: pointer;
 }
@@ -66,14 +85,53 @@
   justify-content: flex-end;
 }
 .itemActivoDetalles {
+  align-self: center;
   padding: 3px 13px 13px 13px;
+  width: 80%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.itemActivoDetalles button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.itemActivoDetalles button img {
+  width: 36px;
+}
+
+.itemActivoDetalles button p {
+  color: var(--principal);
+  font-size: 32px;
+  /* font-weight: bold; */
+  margin: 0%;
+}
+.itemActivoDetalles .indicadorSleep {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  align-items: center;
+  gap: 5px;
+}
+
+.itemActivoDetalles .indicadorSleep p {
+  font-size: 26px;
+  align-self: center;
 }
 .desconectado {
   width: 100%;
+  margin-right: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  bottom: 10px;
+  position: relative;
 }
 .desconectadoTxt p {
   margin: 0px;
@@ -81,6 +139,11 @@
 .encendido {
   display: flex;
   align-items: center;
+  gap: 5px;
+}
+
+.encendido p {
+  font-size: 16px;
 }
 
 .iconoDesconectado {
@@ -90,9 +153,10 @@
 .contenedorImg {
   display: flex;
   align-items: center;
+  margin: 0px 10px;
 }
 .imgItem {
-  width: 88px;
+  width: 55px;
   height: auto;
   object-position: center center;
 }

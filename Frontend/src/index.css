@@ -27,12 +27,12 @@ menu: <span class="material-icons">horizontal_split</span>
 CONFIGURACION: 
 */
 body {
-  width: 420px;
+  width: 100%;
   height: 95vh;
   box-sizing: border-box;
   margin: 0 auto;
 
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 h1 {
   font-weight: 600;
@@ -55,10 +55,10 @@ h2 {
   margin: 0px;
 }
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 32px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -76,5 +76,5 @@ h2 {
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
