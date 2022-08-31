@@ -1,0 +1,2 @@
+`ventiladores` (`id`, `estado`, `conexion`, `nombre`, `velocidad`, `timer`, `sleep`) 
+`aireacondicionado` (`id`, `estado`, `conexion`, `nombre`, `temperatura`, `swin`, `fan`, `modo`, `direccion`, `eco`, `timer`, `sleep`)

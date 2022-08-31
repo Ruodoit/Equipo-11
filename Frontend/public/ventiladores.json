@@ -1,6 +1,7 @@
 {
   "VENTILADORES": [
-    [1, "on", "conect", "vent 1", 3, 0, "desact"],
-    [2, "on", null, "vent 2", 3, null, "desact"]
+    [1, "si", "si", "vent 1", 3, 0, 0],
+    [2, "no", "si", "vent 2", 4, 0, 0],
+    [3, "si", "no", "vent 3", 1, 0, 0]
   ]
 }

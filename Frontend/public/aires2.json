@@ -1,46 +1,7 @@
 {
   "Aires": [
-    [
-      1,
-      "off",
-      "conect",
-      "aire comedor",
-      25,
-      "act",
-      "desact",
-      "calor",
-      2,
-      "act",
-      0,
-      "0"
-    ],
-    [
-      2,
-      "on",
-      "conect",
-      "aire 2",
-      25,
-      "act",
-      "desact",
-      "calor",
-      2,
-      "act",
-      0,
-      "0"
-    ],
-    [
-      3,
-      null,
-      null,
-      "Aire 3",
-      null,
-      null,
-      "act",
-      "frio",
-      null,
-      null,
-      null,
-      null
-    ]
+    [1, "si", "si", "aire 1", 25, "no", 3, "frio", 2, "no", 0, 0],
+    [2, "no", "si", "aire 2", 30, "no", 1, "calor", 3, "no", 0, 0],
+    [3, "no", "no", "aire 3", 25, "no", 3, "frio", 2, "no", 0, 0]
   ]
 }
