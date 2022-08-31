@@ -14,10 +14,6 @@ export default function Menu() {
         <span className='material-icons'>horizontal_split</span>
         <p className='btnTxt'>DISPOSITIVOS</p>
       </button>
-      <button className='btnMenu' onClick={handleClick}>
-        <span className='material-icons'>add_circle_outline</span>
-        <p className='btnTxt'>AGREGAR</p>
-      </button>
       <button className='btnMenu' onClick={handleConfiguracion}>
         <svg
           width='102'
