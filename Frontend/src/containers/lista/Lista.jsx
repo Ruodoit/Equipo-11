@@ -6,7 +6,7 @@ import ListaItem from '../../components/listaItem/ListaItem'
 export default function Lista() {
   const [aire, setAire] = useState([])
   const getAire = async () => {
-    const res = await fetch('/aires2.json')
+    const res = await fetch('/aires.json')
     let json = await res.json()
     setAire(json.Aires)
   }

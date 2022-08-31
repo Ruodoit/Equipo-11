@@ -10,8 +10,6 @@ export default function ListaItem(props) {
   } else if ((dispositivo[2] === 'si') & (dispositivo[1] === 'si')) {
     return <CardEncendido dispositivo={dispositivo}></CardEncendido>
   } else {
-    return (
-      <CardApagado dispositivo={dispositivo}></CardApagado>
-    )
+    return <CardApagado dispositivo={dispositivo}></CardApagado>
   }
 }

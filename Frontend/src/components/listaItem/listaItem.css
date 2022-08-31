@@ -1,7 +1,11 @@
+.link {
+  text-decoration: none;
+}
+
 .itemActivo {
   width: 98vw;
   max-width: 395px;
-  height: 207px;
+  *height: 207px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--principal);
@@ -13,7 +17,7 @@
 .itemInactivo {
   width: 98vw;
   max-width: 395px;
-  height: 140px;
+  *height: 140px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--acento);
@@ -26,7 +30,7 @@
 .itemDesconectado {
   width: 98vw;
   max-width: 395px;
-  height: 140px;
+  *height: 140px;
   box-sizing: border-box;
   background: var(--blanco);
   *border: 1px solid var(--desconectado);
