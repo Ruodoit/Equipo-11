@@ -30,22 +30,6 @@ export default function BtnEditar() {
   )
 }
 
-const Boton = styled.button`
-  display: block;
-  padding: 10px 30px;
-  border-radius: 100px;
-  color: #fff;
-  border: none;
-  background: #1766dc;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s ease all;
-
-  &:hover {
-    background: #0066ff;
-  }
-`
-
 const Contenido = styled.div`
   display: flex;
   flex-direction: column;

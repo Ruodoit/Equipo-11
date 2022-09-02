@@ -1,5 +1,5 @@
 import './listaItem.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import BtnEditar from './BtnEditar'
 import imgVentilador from '../../assets/statics/vent-rojo.png'
 import imgAireGris from '../../assets/statics/aire-gris.png'
