@@ -11,7 +11,7 @@ export default function Ruedita() {
       labelOffset={10}
       knobPosition='left'
       labelBottom='true'
-      limit={70}
+      arcSize={270}
       valueFontSize='2rem'
       renderLabelValue={null}
       progressLineCap='flat'

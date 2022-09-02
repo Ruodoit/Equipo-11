@@ -1,16 +1,16 @@
 import './listaItem.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import BtnEditar from './BtnEditar'
 import imgVentilador from '../../assets/statics/vent-rojo.png'
 import imgAireGris from '../../assets/statics/aire-gris.png'
 
 export default function CardDesconectado(props) {
   const { dispositivo } = props
-  const handleEditar = () => {
-    alert('Aca se abrira el modal con las configuraciones')
-  }
-
+  let direccion = useNavigate(); 
+  const irADispositivo = () =>{ 
+    let ruta = `/dispositivo/:${dispositivo[0]}`; 
+    direccion(ruta);}
   return (
-    <Link to={`/dispositivo/:${dispositivo[0]}`} className='link'>
       <div className='itemDesconectado'>
         <div>
           <div className='itemPrincipal'>
@@ -21,7 +21,6 @@ export default function CardDesconectado(props) {
                 <img src={imgVentilador} alt='' className='imgItem' />
               )}
             </div>
-
             <div className='principalTxt'>
               <h2>{dispositivo[3]}</h2>
               {dispositivo[8] ? (
@@ -30,13 +29,11 @@ export default function CardDesconectado(props) {
                 <p className='infoTxt'>Ventilador</p>
               )}
             </div>
-            <span className='material-icons puntitos' onClick={handleEditar}>
-              more_vert
-            </span>
+            <BtnEditar></BtnEditar>
           </div>
         </div>
 
-        <div className='itemDetalles'>
+        <div className='itemDetalles'onClick={irADispositivo}>
           <div className='desconectado'>
             <span className='material-icons iconoDesconectado'>
               report_problem
@@ -48,6 +45,5 @@ export default function CardDesconectado(props) {
           </div>
         </div>
       </div>
-    </Link>
   )
 }

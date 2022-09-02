@@ -1,29 +1,32 @@
 import './listaItem.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import BtnEditar from './BtnEditar'
 import imgVentilador from '../../assets/statics/vent-rojo.png'
 import imgAireGris from '../../assets/statics/aire-gris.png'
 import vel from '../../assets/vel.png'
 import temp from '../../assets/temp.png'
 import sleep from '../../assets/sleep.png'
+
 export default function CardApagado(props) {
   const { dispositivo } = props
-  const handleEditar = () => {
-    alert(dispositivo[8])
+  let direccion = useNavigate()
+  const irADispositivo = () => {
+    let ruta = `/dispositivo/:${dispositivo[0]}`
+    direccion(ruta)
   }
 
   return (
     <>
-      <Link to={`/dispositivo/:${dispositivo[0]}`} className='link'>
         <div className='itemInactivo'>
           <div className='itemPrincipal'>
-            <div className='contenedorImg'>
+            <div className='contenedorImg' onClick={irADispositivo}>
               {dispositivo[8] ? (
                 <img src={imgAireGris} alt='' className='imgItem' />
               ) : (
                 <img src={imgVentilador} alt='' className='imgItem' />
               )}
             </div>
-            <div className='principalTxt'>
+            <div className='principalTxt' onClick={irADispositivo}>
               <h2>{dispositivo[3]}</h2>
               {dispositivo[8] ? (
                 <p className='infoTxt'>Aire Acondicionado</p>
@@ -31,14 +34,11 @@ export default function CardApagado(props) {
                 <p className='infoTxt'>Ventilador</p>
               )}
             </div>
-            <span className='material-icons puntitos' onClick={handleEditar}>
-              more_vert
-            </span>
+            <BtnEditar></BtnEditar>
           </div>
-          <div className='itemActivoDetalles'>
+          <div className='itemActivoDetalles' onClick={irADispositivo}>
             {dispositivo[8] ? (
               <button style={{ visibility: 'hidden' }}>
-                {' '}
                 <img src={temp} alt='' />
                 <p>{dispositivo[4]}°</p>{' '}
               </button>
@@ -59,7 +59,6 @@ export default function CardApagado(props) {
             </div>
           </div>
         </div>
-      </Link>
     </>
   )
 }

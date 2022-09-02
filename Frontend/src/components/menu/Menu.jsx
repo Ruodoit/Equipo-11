@@ -1,19 +1,18 @@
 import './menu.css'
+import { Link } from 'react-router-dom'
 
 export default function Menu() {
-  const handleClick = () => {
-    alert('Aca se abrira el modal para agregar dispositivos')
-  }
+
   const handleConfiguracion = () => {
     alert('Aca se abrira el modal con las configuraciones')
   }
 
   return (
     <div className='menu'>
-      <button className='btnMenu'>
+      <Link className='btnMenu'  to='/'>
         <span className='material-icons'>horizontal_split</span>
         <p className='btnTxt'>DISPOSITIVOS</p>
-      </button>
+      </Link>
       <button className='btnMenu' onClick={handleConfiguracion}>
         <svg
           width='102'
