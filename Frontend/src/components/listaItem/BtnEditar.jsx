@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styled from 'styled-components'
 import Modal from '../modal/Modal'
 
 export default function BtnEditar() {
@@ -18,37 +17,12 @@ export default function BtnEditar() {
         setEstado={setEstadoModal}
         mostrarHeader={false}
         mostrarOverlay={true}
-        /* lo puedo sacar, queda 20px por defecto*/
-        padding={'20px'}
       >
-        <Contenido>
+        <div className='contenidoModal'>
           <h2>proximamente</h2>
           <p>nuevas funciones</p>
-        </Contenido>
+        </div>
       </Modal>
     </>
   )
 }
-
-const Contenido = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  img {
-    width: 100%;
-    vertical-align: top;
-    border-radius: 3px;
-  }
-`

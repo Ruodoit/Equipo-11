@@ -13,7 +13,11 @@ const Modal = ({
   return (
     <>
       {estado && (
-        <Overlay mostrarOverlay={mostrarOverlay} posicionModal={posicionModal}>
+        <Overlay
+          mostrarOverlay={mostrarOverlay}
+          posicionModal={posicionModal}
+          onClick={() => setEstado(false)}
+        >
           <ContenedorModal padding={padding}>
             {mostrarHeader && (
               <EncabezadoModal>
@@ -51,7 +55,6 @@ const Overlay = styled.div`
   background: ${(props) =>
     props.mostrarOverlay ? 'rgba(0, 0, 0, 0.5);' : 'rgba(0, 0, 0, 0);'} 
   //si borro align-items y justify-content, con el padding queda alineado a la izquierda pero lindo
-  *padding: 40px;
   display: flex;
   align-items: ${(props) =>
     props.posicionModal ? props.posicionModal : 'center'};
@@ -59,6 +62,7 @@ const Overlay = styled.div`
 `
 const ContenedorModal = styled.div`
   width: 70vw;
+  max-width: 500px;
   min-heigth: 100px;
   background: #fff;
   position: relative;

@@ -17,3 +17,8 @@
   color: var(--texto);
   font-size: 56px;
 }
+.contenidoModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
